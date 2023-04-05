@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Escape room</title>
+</head>
+
+<body>
+    <h2>Escape room</h2>
+    <div id="room">
+        <img id="fireplace" src="images/fireplace.png" alt="">
+        <img id="fire" src="images/fire.png" class="fire-droppable" alt="">
+        <img id="fireplace-door" onclick = "movefireplaceDoor()" src="images/closed-fireplace-door.png" alt="">
+        <img id="matches" src="images/matches.png" alt="">
+        <img id="door" src="images/door.png" alt="">
+        <img id="lock-1" src="images/lock-closed.png" alt="">
+        <img id="lock-2" src="images/lock-closed.png" alt="">
+        <img id="lock-3" src="images/lock-closed.png" class="lock-3-droppable" alt="">
+        <img id="lock-4" src="images/lock-closed.png" alt="">
+        <img id="lock-5" src="images/lock-closed.png" alt="">
+        <img id="lamp" src="images/lamp-off.png" alt="">
+        <img id="lamp-switch" src="images/lamp-switch.png" onclick = "turnLamp()" alt="">
+        <img id="wall-note" src="images/wall-note.png" alt="">
+        <img id="picture" src="images/picture-closed.png" onclick = "movePicture()" alt="">
+        <img id="key-picture" src="images/key-picture.png" alt="">
+
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/firePlaceQuest.js"></script>
+    <script src="js/lampQuest.js"></script>
+    <script src="js/pictureQuest.js"></script>
+</body>
+
+</html>
