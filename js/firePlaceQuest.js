@@ -1,18 +1,18 @@
 //***First Quest Firaplace***/
 let currentDroppable = null;
 
-
 const fireplaceDoor = document.getElementById("fireplace-door");
 const matches = document.getElementById("matches"); 
 const firstLock = document.getElementById("lock-2");
+const fireplaceNote = document.getElementById("fireplace-note");
 
 const movefireplaceDoor = () => {    
     if (fireplaceDoor.src.match("closed")) {
         fireplaceDoor.src = "images/openned-fireplace-door.png";
-        matches.style.opacity = state.fire ? 0 : 1;
+        matches.style.opacity = state.doorOpen ? 0 : 1;
     } else {
         fireplaceDoor.src = "images/closed-fireplace-door.png";
-        matches.style.opacity = 0
+        matches.style.opacity = 0;
     }
 }
 
@@ -64,11 +64,14 @@ matches.onmousedown = (event)=> {
     const enterDroppable = (elem) => {
         elem.style.opacity = 1;
         matches.style.opacity = 0; 
+        fireplaceNote.style.opacity = 1;
         firstLock.src = "images/lock-openned.png";
-        state.fire = true
+        state.doorOpen = true;
+        console.log(`lockOneFirst==> ${state.lockOne}`)  
       }
     
     matches.ondragstart = () => {
         return false;
       };
   };
+  

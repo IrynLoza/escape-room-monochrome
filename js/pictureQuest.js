@@ -4,13 +4,18 @@ let droppableLockSecond = null;
 const picture = document.getElementById("picture");
 const keyPicture = document.getElementById("key-picture"); 
 const secondLock = document.getElementById("lock-3"); 
+const pictureNote = document.getElementById("picture-note"); 
 
 const movePicture = () => {    
     if (picture.src.match("closed")) {
         picture.src = "images/picture-openned.png";
-        keyPicture.style.opacity = state.keySecond ? 0 : 1;
+        keyPicture.style.opacity = state.secondLock ? 0 : 1;
+        pictureNote.style.opacity = 1;
+
     } else {
         picture.src = "images/picture-closed.png";
+        keyPicture.style.opacity =  0;
+        pictureNote.style.opacity = 0;
     }
 }
 
@@ -54,7 +59,6 @@ keyPicture.onmousedown = (event)=> {
         elem.style.opacity = 1;
         keyPicture.style.opacity = 0; 
         secondLock.src = "images/lock-openned.png";
-        state.keySecond = true;
       }
     
     keyPicture.ondragstart = () => {
