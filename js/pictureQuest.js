@@ -9,7 +9,7 @@ const pictureNote = document.getElementById("picture-note");
 const movePicture = () => {    
     if (picture.src.match("closed")) {
         picture.src = "images/picture-openned.png";
-        keyPicture.style.opacity = state.secondLock ? 0 : 1;
+        keyPicture.style.opacity = state.pictureOpen ? 0 : 1;
         pictureNote.style.opacity = 1;
 
     } else {
@@ -59,6 +59,8 @@ keyPicture.onmousedown = (event)=> {
         elem.style.opacity = 1;
         keyPicture.style.opacity = 0; 
         secondLock.src = "images/lock-openned.png";
+        state.pictureOpen = true;
+        state.increment();
       }
     
     keyPicture.ondragstart = () => {

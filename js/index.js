@@ -1,4 +1,14 @@
-const state = {};
+let lockCount = 0;
+
+const state = {
+  increment: () => {
+    lockCount +=1;
+    if(lockCount >= 3) {
+      enableScreen();
+    }
+  },
+};
+
 
 // const openAndClose = (openObject, movingObject) => {   
 //   console.log(`openObject===> ${openObject.src}`) 

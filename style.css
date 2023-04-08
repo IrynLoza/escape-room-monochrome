@@ -105,7 +105,7 @@ body {
   opacity: 0;
 }
 
-#plant-note-zoom-layer {
+#zoom-layer {
   position: absolute;
   top: 200px;
   left: 235px;
@@ -159,10 +159,35 @@ body {
   left: 1015px;
 }
 
+#screen-close {
+  position: absolute;
+  top:220px;
+  left: 1050px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#screen-zoom {
+  position: absolute;
+  top: 250px;
+  left: 400px;
+  opacity: 0;
+  visibility: hidden;
+}
+
 #drawer {
   position: absolute;
   top: 472px;
   left: 997px;
+}
+
+#password {
+  position: absolute;
+  top: 472px;
+  left: 997px;
+  background-color: black;
+  opacity: 0;
+  visibility: hidden;
 }
 
 #lock-1 {

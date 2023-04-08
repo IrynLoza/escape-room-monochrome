@@ -67,7 +67,8 @@ matches.onmousedown = (event)=> {
         fireplaceNote.style.opacity = 1;
         firstLock.src = "images/lock-openned.png";
         state.doorOpen = true;
-        console.log(`lockOneFirst==> ${state.lockOne}`)  
+
+        state.increment();
       }
     
     matches.ondragstart = () => {
