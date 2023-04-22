@@ -183,11 +183,18 @@ body {
 
 #password {
   position: absolute;
-  top: 472px;
-  left: 997px;
-  background-color: black;
+  left: 433px;
+  top: 330px;
   opacity: 0;
   visibility: hidden;
+}
+
+#password-input {
+  background-color: black;
+  color: white;
+  height:150px;
+  width: 500px;
+  font-size:55pt;
 }
 
 #lock-1 {

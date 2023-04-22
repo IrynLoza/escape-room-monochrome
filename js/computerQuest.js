@@ -4,6 +4,7 @@ const screenZoom = document.getElementById("screen-zoom");
 const zoomClose = document.getElementById("screen-close");
 const password = document.getElementById("password");
 const forthLock = document.getElementById("lock-5");
+const passwordInput = document.getElementById("password-input");
 
 const enableScreen = () => {
     computerScreen.src = "images/screen-on.png"
@@ -20,6 +21,9 @@ const zoomScreen = () => {
     password.style.visibility = "visible"
     state.screen = true
     forthLock.src = "images/lock-openned.png"; 
+    if (document.querySelector('input').value === "ALOHOMORA" && document.querySelector('input').value === "alohomora") {
+       console.log("Awesome!");
+    } 
 }
 
 const closeScreen = () => {
@@ -35,4 +39,5 @@ const closeScreen = () => {
         state.screen = false
     }
 }
+
 
